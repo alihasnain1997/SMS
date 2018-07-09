@@ -1,0 +1,113 @@
+
+<html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+
+    <script src="js/scripts.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <title>SMS</title>
+</head>
+<body >
+<h1>Store  Management  System </h1>
+<nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Jilani Solutions</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Order <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="newOrder.jsp">New Order</a></li>
+                    <li><a href="#">Check order</a></li>
+                    <li><a href="#">sales</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Customer <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Add New Customer</a></li>
+                    <li><a href="#">Customer Details</a></li>
+                    <li><a href="#">Edit Customer</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Vendor <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="addVendor.jsp">Add New vendor</a></li>
+                    <li><a href="showVendor.jsp">Vendor Details</a></li>
+                    <li><a href="#">Edit Vendor</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">inventory <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="addProduct.jsp">Add Inventory</a></li>
+                    <li><a href="#">Update Inventory</a></li>
+                    <li><a href="#">View inventory</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<table class="table-responsive">
+    <thead>
+    <tr>
+        <th><label>#</label></th>
+        <th><label>Product</label></th>
+        <th><label>Quantity</label></th>
+        <th><label>Unit Price</label></th>
+        <th><label>Total Price</label></th>
+        <th><label>Description</label></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input class="form-control" name="#[]" type="text" placeholder="0"/></td>
+        <td><input class="form-control" name="Product[]" type="text" placeholder="Product"/></td>
+        <td><input class="form-control" name="Quantity[]" type="number" placeholder="Quantity"/></td>
+        <td><input class="form-control" name="Unit Price[]" type="number" placeholder="Unit Price"/></td>
+        <td><input class="form-control" name="Total price[]" type="number" placeholder="Total Price"/></td>
+        <td><input class="form-control" name="Description[]" type="text" placeholder="Description"/></td>
+        <td>
+            <button class="btn btn-danger btn-remove" type="button">
+                <i class="glyphicon glyphicon-minus gs"></i>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+<button class="btn btn-success btn-add" type="button">
+    <i class="glyphicon glyphicon-plus gs"></i>
+    <b> Add</b>
+</button>
+<legend>   <label class="col-lg-offset-9">Total</label>
+    <input type="number" name="Total"></legend>
+<form method="post" action="checkOut.jsp">
+<div class="container-fluid">
+    <br>
+    <label><legend>Customer Name :</legend> </label>
+    <input  type="text" name="customerName" required pattern="[a-z A-Z]*">
+    <label><legend>Customer Number :</legend> </label>
+    <input type="text" name="customerNumber" required pattern="[0-9*">
+<button class="btn btn-success btn-block" type="submit">
+    <i class="glyphicon glyphicon-ok-sign"></i>
+    <b>Check Out
+    </b></button></div>
+</form>
+</body>
+</html>
